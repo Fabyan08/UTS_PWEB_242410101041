@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --color-bgDark: #070707;
+    --color-bgPanel: #0f0f0f;
+    --color-accent: #382396;
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-display: "Bebas Neue", sans-serif;
+}
+
+body.dashboard {
+    background-color: #0b071a;
+    background-image: radial-gradient(
+        circle at 100% 0%,
+        #20134a 0%,
+        #0b071a 50%
+    );
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.kaca {
+    background: rgba(30, 22, 53, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    background-color: #080510;
+}
+
+.glass-card {
+    background: rgba(30, 25, 55, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.input-line {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.input-line:focus {
+    outline: none;
+    border-bottom-color: #8b5cf6;
+    box-shadow: none;
+}
+
+.float {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.marquee-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 20;
+}
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    color: #a78bfa;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Landing page */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(7, 7, 7, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 10;
+}
+
+.glass-dark {
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070707;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d9381e;
+}
